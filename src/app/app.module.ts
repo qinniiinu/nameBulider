@@ -23,6 +23,7 @@ export const MY_FORMATS = {
 };
 
 import 'zone.js';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [AppComponent],
@@ -34,7 +35,10 @@ import 'zone.js';
     ReactiveFormsModule,
     FormsModule,
     MatFormFieldModule,
-    MatInputModule,MatNativeDateModule,MatDatepickerModule
+    MatInputModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
+    MatButtonModule
   ],
 
   bootstrap: [AppComponent],
