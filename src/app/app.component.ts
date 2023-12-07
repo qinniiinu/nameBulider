@@ -40,8 +40,8 @@ export class AppComponent {
 
     this.title =
       `[${this.crName}]` +
-      `${this.cr ? '需求文件01_' : ''}` +
-      `${this.operation ? '操作文件01_' : ''}` +
+      `${this.cr ? '需求文件_' : ''}` +
+      `${this.operation ? '操作文件_' : ''}` +
       `${this.flow ? '流程圖_' : ''}` +
       `${this.confirm ? '需求確認_' : ''}` +
       `${this.update ? '需求更新_' : ''}` +
