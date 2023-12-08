@@ -5,6 +5,14 @@
   </div>
 
   <h1 #copyVal>{{title}}_{{date| date:'yyyyMMdd'}}.png</h1>
+
+  <div>
+    <p> Email信件</p>
+    收信時先判斷是否是需求內容
+    是需求請建立文OTIS卡片並上傳文件
+  </div>
+  <div>
+
   <div>
     CR名稱 ：<mat-form-field>
       <input matInput type="text" [(ngModel)]="crName" (ngModelChange)="build()">
@@ -44,22 +52,16 @@
       <mat-radio-button [value]="false">否</mat-radio-button>
     </mat-radio-group>
   </div>
-  <div>
 
-    <p> 5. Email信件</p>
-    收信時先判斷是否是需求內容
-    是需求請建立文OTIS卡片並上傳文件
-  </div>
-  <div>
 
-    <p> 6. 需求更新</p>
+    <p> 5. 需求更新</p>
     <mat-radio-group [(ngModel)]="update" (ngModelChange)="build('update')">
       <mat-radio-button [value]="true">是</mat-radio-button>
       <mat-radio-button [value]="false">否</mat-radio-button>
     </mat-radio-group>
   </div>
   <div>
-    <p> 7. ISSUE
+    <p> 6. ISSUE
     </p>
     <mat-radio-group [(ngModel)]="issue" (ngModelChange)="build()">
       <mat-radio-button [value]="true">是</mat-radio-button>
