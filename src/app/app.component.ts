@@ -8,6 +8,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 export class AppComponent {
   @ViewChild('copyVal') copyVal!: ElementRef;
   title = 'name-creater';
+  orginalName = '原本的檔案名稱'
   cr = false;
   operation = false;
   flow = false;
@@ -18,6 +19,19 @@ export class AppComponent {
   msg!: string;
 
   crName = '防火牆申請規則';
+
+  ngOnInit(): void {
+    this.title =
+      `[${this.crName}]` +
+      `${this.cr ? '需求文件_' : ''}` +
+      `${this.operation ? '操作文件_' : ''}` +
+      `${this.flow ? '流程圖_' : ''}` +
+      `${this.confirm ? '需求確認_' : ''}` +
+      `${this.update ? '需求更新_' : ''}` +
+      `${this.issue ? 'ISSUE_' : ''}` +
+      `${this.orginalName}`;
+
+  }
 
   build(val?: any) {
     console.log(val);
@@ -46,7 +60,7 @@ export class AppComponent {
       `${this.confirm ? '需求確認_' : ''}` +
       `${this.update ? '需求更新_' : ''}` +
       `${this.issue ? 'ISSUE_' : ''}` +
-      `原本的檔案名稱`;
+      `${this.orginalName}`;
   }
 
   copy() {

@@ -1,5 +1,23 @@
 h1{
   border: 2px solid black;
+  background: yellow;
   padding: 10px;
   margin: 10px;
+  font-size: 30px;
+}
+
+.decorate{
+  border: 2px solid gray;
+  padding: 10px;
+  padding-bottom: 0px;
+  margin: 20px;
+  &.mail{
+    border-color: red;
+    color: red;
+    font-weight: 600;
+  }
+}
+
+.flex{
+  display: flex;
 }
